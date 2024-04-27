@@ -12,6 +12,7 @@ formularioCalculadora.addEventListener('submit', (evento) => {
 function calcularCalorias() {
     aparecerResultado();
     const edad = document.querySelector('#edad');
+    const name = document.querySelector('#name')
     const peso = document.querySelector('#peso')
     const altura = document.querySelector('#altura');
     const actividad = document.querySelector('#actividad');
@@ -45,7 +46,7 @@ function calcularCalorias() {
 
     resultado.innerHTML = `
         <div class=" card-body d-flex flex-column justify-content-center align-items-center h-100" id="calculo">
-            <h5 class="card-title h2">Calorías requeridas</h5>
+            <h5 class="card-title h2">"${name} Debes consumir"</h5>
             <div class="mb-3 w-100">
                 <input class="form-control text-center" value="${Math.floor(calcularCalorias)} kcal" style="font-size: 2rem" disabled>
             </div>
